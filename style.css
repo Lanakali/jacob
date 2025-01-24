@@ -1,0 +1,287 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', sans-serif;
+    color: #333;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #a020f0, #eb9494); /* Fixed gradient */
+    background-attachment: fixed; /* Keeps the background fixed in place */
+    transition: background 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Main Section */
+.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.tab {
+    color: #a020f0;
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.tab.active-tab {
+    background: #a020f0;
+    color: white;
+    transform: scale(1.1);
+}
+
+.tab:hover {
+    background: #a020f0;
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Content Blocks */
+.content-block {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+    margin-bottom: 20px;
+}
+
+.images {
+    width: 30%;
+    max-width: 300px;
+    margin: 0 20px;
+    border-radius: 10px;
+    flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+.text {
+    flex: 1;
+    color: white;
+    font-size: 25px;
+}
+
+.title {
+    color: black;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Event Section */
+.event-section {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom right, #ff9a9e, #fecfef);
+    padding: 20px;
+}
+
+/* Card Container */
+.card-container {
+    perspective: 1000px;
+    max-width: 100%; /* Ensure the card container doesn't exceed screen size */
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+    max-width: 90%; /* Prevent card from being too wide on small screens */
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-front {
+    background: #fff;
+}
+
+.card-inside-1 {
+    background: #ffd1dc;
+    transform: rotateY(90deg);
+}
+
+.card-inside-2 {
+    background: #ffb6c1;
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    background: #ff5678;
+    color: white;
+    transform: rotateY(270deg);
+}
+
+/* Flip States */
+.card.step-1 {
+    transform: rotateY(-90deg);
+}
+
+.card.step-2 {
+    transform: rotateY(-180deg);
+}
+
+.card.step-3 {
+    transform: rotateY(-270deg);
+}
+
+.card.step-4 {
+    transform: rotateY(-360deg);
+}
+
+/* Buttons */
+button {
+    background: #ff5678;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    margin: 5px;
+}
+
+button:hover {
+    background: #ff304f;
+    transform: scale(1.05);
+}
+
+.response-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 300px;
+        height: 200px;
+    }
+
+    .images {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .text {
+        font-size: 18px;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 250px;
+        height: 180px;
+    }
+
+    .images {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .text {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+h5{
+    font-size: 150px;
+}
+
+/* General Styles */
+body {
+    font-family: 'Georgia', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #a020f0, #ff5678);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite; /* Animated gradient */
+    overflow-x: hidden;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Smooth Transition for Tabs */
+.tab-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.tab-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-container {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+} 

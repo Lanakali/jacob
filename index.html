@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You a loverboy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<audio id="background-audio" loop >
+        <source src="uploads\6LACK - Stan (Audio).mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+</audio>
+<!-- Main Section -->
+<section class="main">
+    <header class="tabs">
+        <button class="tab active-tab" id="tab-overview">Overview</button>
+        <button class="tab" id="tab-her">Her</button>
+        <button class="tab" id="tab-him">Him</button>
+        <button class="tab" id="tab-memories">Memories</button>
+        <button class="tab" id="tab-events">Event</button>
+
+
+    </header>
+
+
+    
+    
+    <!-- Overview Section -->
+    <div class="tab-content active" id="overview">
+        <h5>Comming soon</h5>
+    </div>
+    <div class="tab-content" id="HER">
+        <div class="content-block">
+            <img class="images" src="uploads\IMG-20231225-WA0387.jpg" alt="Sample">
+            
+            <button class="edit-btn" onclick="changePhoto('her', 1)" style="display: none;">Change Photo 1</button>
+            <div class="text">
+                
+                <p>She’s so smart, talented, and strong. She handles everything with grace and determination. Her laugh is contagious, and it can make even the worst days better. I love how she can turn any moment into something special.
+                    She has a heart of gold, and she always gives love, not just to me, but to everyone around her.She makes me want to be a better person every day. .She makes everything better—whether it’s a small moment or a big adventure. Her presence lights up everything.
+                    I love  how she makes everyone around her (especially me)feel important and loved.
+                    </p>
+                    <button class="edit-btn" onclick="editParagraph('her', 1)" style="display: none;">Edit Paragraph 1</button>
+            </div>
+        </div>
+        <div class="content-block ">
+            <div class="text">
+                
+                <p>Every time I see you, it feels like I’m seeing you for the very first time—you always leave me in awe. Your smile is honestly the most beautiful thing I’ve ever seen. And your eyes, uggggg! They’re my favorite sight, and I could never get enough of them. When you speak, it’s like the whole world fades away, and I just want to listen to you forever. You are such a beautiful soul, and it's not just a privilege to know you, but an absolute honor to call you mine.</p>
+                    <button class="edit-btn" onclick="editParagraph('her', 2)" style="display: none;">Edit Paragraph </button>
+            </div>
+            <img class="images" src="uploads\IMG-20250107-WA0005.jpg" alt="Sample">
+            <button class="edit-btn" onclick="changePhoto('her', 2)" style="display: none;">Change Photo 2</button>
+        </div>
+    </div>
+    <div class="tab-content" id="HIM">
+        <h5 >Comming soon</h5>  
+    </div>
+    <div class="tab-content" id="Memories">
+        <img class="images" src="uploads\Screenshot_20250102-000416.jpg" alt="Sample">
+        <img class="images" src="uploads\Screenshot_20250115-084153.jpg" alt="Sample">
+        <img class="images" src="uploads\Screenshot_20250117-091018.jpg" alt="Sample">
+        <img class="images" src="uploads\Screenshot_20250118-000800.jpg" alt="Sample">
+    </div>
+
+
+
+</section>
+  <!-- Event Section -->
+  <section class="event-section">
+    <div class="card-container">
+      <div class="card" id="flip-card">
+        <!-- Front Page -->
+        <div class="card-face card-front">
+          <h1>Dear Thabiso</h1>
+          <button class="next-button">Next</button>
+        </div>
+        <!-- Inside Page 1 -->
+        <div class="card-face card-inside-1">
+          
+          <p>Thabiso Wee, you are the sweetest part of my life. 
+            I never imagined I could feel this way about someone, 
+            but you’ve shown me a love I never thought possible. 
+            Every moment with you feels like a dream come true, 
+            and I’m so grateful to have you by my side. 
+            You make everything brighter, and I can't wait to spend many more moments with you. 
+            Soo....</p>
+          <button class="next-button">Next</button>
+        </div>
+        <!-- Inside Page 2 -->
+        <div class="card-face card-inside-2">
+          <h1>Will You Be My Valentine?</h1>
+          <div class="response-buttons">
+            <button id="yes-button" class="next-button">Yes 💕</button>
+            <button id="no-button">No 😢</button>
+          </div>
+          
+        </div>
+        <!-- Back Page -->
+        <div class="card-face card-back">
+          <h1>Made with ❤️</h1>
+          <p>P.s this took me a long ass time to make!</p>
+          <button class="next-button">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
